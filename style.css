@@ -1,0 +1,74 @@
+body{
+	background-color: lightgray;
+}
+
+h1{
+	text-align: center;
+	/*background-color: #9ab973;*/
+	color: #6b8e23;
+	height: 60px;
+	padding: 10px;
+	margin-bottom: 30px;
+}
+
+input{
+	width: 100%;
+}
+
+.main_container{
+	margin-top: 20px;
+	border: 5px solid #9ab973;
+	background-color: silver;
+}
+
+#divAdd{	
+	/*border:1px solid  ;*/
+	height: 60px;
+	background-color: darkgray;
+	margin-bottom: 20px;
+}
+
+.editSave{
+	width: 80px;
+	float: left;
+}
+
+.editCancel{
+	width: 80px;
+	float: right;
+}
+
+.save{
+	width: 80px;
+	background-color: #6b8e23;
+	margin-top: 10px;
+	float: left;
+}
+
+.cancel {
+	width: 80px;
+	margin-top: 10px;
+	float: right;
+}
+
+.btnDelete{
+	width: 80px;
+	float: right;
+}
+
+.btnEdit{
+	width: 80px;
+	float: left;
+}
+
+.done{
+	text-decoration: line-through;
+	color: red;
+	opacity: 0.4;
+}
+
+
+.ckbxCompleteItem{
+	height: 20px;
+	width: 20px;
+}
