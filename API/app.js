@@ -1,3 +1,4 @@
+
 const express = require('express')
 const app = express()
 const mysql = require("mysql");  
@@ -8,7 +9,6 @@ const mysql = require("mysql");
 // app.get('/', (req, res) => res.send('786'))  
 // sara code listening ke line ke pehle hona chaiye
 // app.listen(3000, () => console.log('Example app listening on port 3000!'))
-
 
 // ========================================
 // (1) Make connection.
@@ -35,26 +35,33 @@ connection.connect(function(err){
 // (3) Make routes. Pehle humne connection banaya, ab route ban rahe hai
 // this-  jab query karenge tab actual call hoga
 // ====================================================================
-// pehli default route
-    app.get('/', function(req, res){
-         res.send('786yaali')
-    })
 
-// tasks route 
-    app.get('/tasks', function(req, res) {
-        // var tasks = {"Done":"786 yali madad"} yeh hard code query ki hai
-        // res.send(tasks)
-//  
-        var qry = "SELECT * from tasks"
-        connection.query(qry, [], function(err, result) {
-            console.log(result);
-            // res.send(result);
-        });
-    })
+//(1) pehli default route
+app.get('/', function(req, res){
+        res.send('786yaali')
+})
 
-    
+// (2) tasks route 
+app.get('/tasks', function(req, res) {
+    // var tasks = {"Done":"786 yali madad"} yeh hard code query ki hai
+    // res.send(tasks)
+    var qry = "SELECT * from tasks"
+    connection.query(qry, [], function(err, result) {
+        // console.log(result);
+        res.send(result);
+    });
+})
+
+//  (3) each task route with its id
+app.get('/taskid', function(req, res){
+    var qry = "select * from tasks where taskid = 1"
+    connection.query(qry,[], function(err, result){
+        res.send(result);
+    });
+})
 
 
-
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+//=================================== 
+app.listen(3000, () => console.log('API is running on port 3000!'))
+// ====================================
 // END
