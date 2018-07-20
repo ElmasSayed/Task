@@ -4,7 +4,7 @@
 	when prompted for file association for app write::: app.js
 	npm install express --save
     create app.js file and from expressjs.com site copy the helloworld example and paste in in the app.js file .
-    then go to gitbash here to test the localhost server working or not.
+    then go to gitbash here, Type node app.js and hit to test the localhost server working or not.
     When it says the servr i slistening go check on web browser and go to localhost ## given
 
 now go to mysql workbench 
